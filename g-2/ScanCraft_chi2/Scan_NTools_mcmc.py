@@ -15,7 +15,7 @@ from command.outputfile import *
 
 # settings
 ism='all'
-target_number=1000
+target_number=10000
 step_factor=10. # sigma = n% of (maximum - minimum) of the free parameters
 slop_factor=1. # difficulty of accepting a new point with higher chisq
 ignore=[ 'Landau Pole'#27
@@ -74,7 +74,7 @@ while record_number < target_number:
         chisq_list['h_sm']=min(chi_h1,chi_h2)
     chisq_list['bsg']=chi2(spectr.LOWEN[1]*1e4,bsg)
     chisq_list['bmu']=chi2(spectr.LOWEN[4]*1e9,bmu)
-    chisq_list['Del_a_mu']=chi2(spectr.LOWEN[6],Del_a_mu)
+    chisq_list['Del_a_mu']=chi2(spectr.LOWEN[6],Del_a_mu)*10
     # chisq_list['LHCfit']=sum(spectr.LHCFIT.values())
     chisq=sum(chisq_list.values())
 
