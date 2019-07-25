@@ -15,7 +15,7 @@ from command.outputfile import *
 
 # settings
 ism='all'
-target_number=1000
+target_number=10000
 step_factor=10. # sigma = n% of (maximum - minimum) of the free parameters
 slop_factor=1. # difficulty of accepting a new point with higher chisq
 ignore=[ 'Landau Pole'#27
