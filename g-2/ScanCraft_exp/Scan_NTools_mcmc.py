@@ -39,7 +39,7 @@ free.AddScalar('tanB','MINPAR',3,1.,60.)
 free.AddScalar('AKAPPA','EXTPAR',64,-2000.,2000.)
 free.AddScalar('MA','EXTPAR',124,50.,2000.)
 free.AddScalar('ATOP','EXTPAR',11,-5000.,5000.)
-free.AddScalar(' AE3','EXTPAR',13,100.,2000.)
+free.AddScalar('AE3','EXTPAR',13,100.,2000.)
 free.AddScalar('ML3','EXTPAR',33,100.,2000.)
 free.AddScalar('ME3','EXTPAR',36,100.,2000.)
 
