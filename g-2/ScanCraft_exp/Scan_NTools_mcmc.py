@@ -15,7 +15,7 @@ from command.outputfile import *
 
 # settings
 ism='all'
-target_number=10000
+target_number=1000
 step_factor=10. # sigma = n% of (maximum - minimum) of the free parameters
 slop_factor=1. # difficulty of accepting a new point with higher chisq
 ignore=[ 'Landau Pole'#27
@@ -30,7 +30,18 @@ ignore=[ 'Landau Pole'#27
 # setup parameter point
 free=scan()
 # Lambda,Kappa,A_Lambda,A_Kappa,mu,tanBeta,A_t
+free.AddScalar('M1','EXTPAR',1,20.,2000.)
+free.AddScalar('M2','EXTPAR',2,100.,2000.)
+free.AddScalar('LAMBDA','EXTPAR',61,0.001,0.75)
+free.AddScalar('KAPPA','EXTPAR',61,0.001,0.75)
+free.AddScalar('MUEFF','EXTPAR',65,100.,2000.)
 free.AddScalar('tanB','MINPAR',3,1.,60.)
+free.AddScalar('AKAPPA','EXTPAR',64,-2000.,2000.)
+free.AddScalar('MA','EXTPAR',124,50.,2000.)
+free.AddScalar('ATOP','EXTPAR',11,-5000.,5000.)
+free.AddScalar(' AE3','EXTPAR',13,100.,2000.)
+free.AddScalar('ML3','EXTPAR',33,100.,2000.)
+free.AddScalar('ME3','EXTPAR',36,100.,2000.)
 
 # setup NMSSMTools controller
 N=NMSSMTools(input_mold='./mcmc/inp.dat')
